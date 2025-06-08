@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/signUp.css">
+    <title>KT Portal</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left-aligned Image -->
+            <div class="col-auto">
+                <img src="../public/photo-1634326080825-985cfc816db6.avif" alt="Left Aligned Image"
+                    class="left-aligned-img">
+            </div>
+
+            <!-- Right-aligned Form -->
+            <div class="col d-flex justify-content-center align-items-center vh-100 mt-3">
+                <div class="form-container">
+                    <h3 class="text-center mb-3">Sign up</h3>
+
+
+                    <!-- Form Fields -->
+                    <form>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" placeholder="Username" name="name" required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="email" class="form-control" placeholder="Email" name="email" required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="number" class="form-control" placeholder="EmployeeId" name="Employee Id" required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="password" class="form-control" placeholder="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100">Sign up</button>
+                    </form>
+
+                    <!-- Separator -->
+                    <div class="text-center my-2">
+                        <span>───── or ─────</span>
+                    </div>
+
+                    <!-- Sign In Button -->
+                    <button class="btn btn-dark w-100">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
+</body>
+
+</html>
