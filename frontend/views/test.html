@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KT Portal - Acme Tech Pvt. Ltd.</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-blue-900 text-white p-4 shadow">
+    <h1 class="text-2xl font-bold">KT Portal - Acme Tech Pvt. Ltd.</h1>
+  </header>
+
+  <main class="p-6">
+    <!-- Search -->
+    <section class="mb-6">
+      <input type="text" placeholder="Search by Project / Technology / Employee Name" class="w-full p-3 rounded shadow" />
+    </section>
+
+    <!-- Upcoming KTs -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Upcoming KTs</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white shadow rounded">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="p-3 text-left">KT Topic</th>
+              <th class="p-3 text-left">Presenter</th>
+              <th class="p-3 text-left">Date & Time</th>
+              <th class="p-3 text-left">Project</th>
+              <th class="p-3 text-left">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3">Microservices Basics</td>
+              <td class="p-3">Alice Thomas</td>
+              <td class="p-3">10-Jun-2025 3PM</td>
+              <td class="p-3">Project Zephyr</td>
+              <td class="p-3 text-blue-600">Join Session</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="p-3">DevOps CI/CD Flow</td>
+              <td class="p-3">Ravi Patel</td>
+              <td class="p-3">12-Jun-2025 11AM</td>
+              <td class="p-3">PhoenixOps</td>
+              <td class="p-3 text-blue-600">Join Session</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Recent KTs -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Recent KTs</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white shadow rounded">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="p-3 text-left">KT Topic</th>
+              <th class="p-3 text-left">Presented By</th>
+              <th class="p-3 text-left">Date</th>
+              <th class="p-3 text-left">Materials</th>
+              <th class="p-3 text-left">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3">React Architecture</td>
+              <td class="p-3">John Doe</td>
+              <td class="p-3">5-Jun-2025</td>
+              <td class="p-3 text-blue-600">Docs | Slides | Video</td>
+              <td class="p-3 text-green-600">Completed</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="p-3">MongoDB Optimization</td>
+              <td class="p-3">Neha Verma</td>
+              <td class="p-3">3-Jun-2025</td>
+              <td class="p-3 text-blue-600">Docs | Video</td>
+              <td class="p-3 text-green-600">Completed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Feedback -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Feedback</h2>
+      <label class="block mb-2">How helpful was your last KT?</label>
+      <div class="flex space-x-1 text-yellow-500 text-2xl">
+        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>☆</span>
+      </div>
+      <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded">Submit Feedback</button>
+    </section>
+
+    <!-- Login -->
+    <section class="bg-white p-4 rounded shadow max-w-md mx-auto">
+      <h2 class="text-xl font-semibold mb-4">Login</h2>
+      <input type="text" placeholder="Employee ID" class="w-full p-2 border mb-3 rounded" />
+      <button class="bg-blue-600 text-white w-full py-2 rounded">Login</button>
+      <p class="text-blue-500 text-sm mt-2 text-center">Forgot Password?</p>
+    </section>
+  </main>
+
+  <footer class="bg-blue-900 text-white text-center p-3 mt-10">
+    &copy; 2025 Acme Tech Pvt. Ltd. All rights reserved.
+  </footer>
+</body>
+</html>
