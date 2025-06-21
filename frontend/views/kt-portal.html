@@ -89,54 +89,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!--script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      const token = localStorage.getItem('token');
-      if (!token) return window.location.href = '/login.html';
-
-      try {
-        const res = await fetch('/user-dashboard', {
-          headers: { 'Authorization': 'Bearer ' + token }
-        });
-        const data = await res.json();
-
-        document.getElementById('userName').textContent = data.name;
-        document.getElementById('projectName').textContent = data.project;
-
-        const moduleList = document.getElementById('moduleList');
-        moduleList.innerHTML = '';
-        data.modules.forEach(mod => {
-          const li = document.createElement('li');
-          li.className = 'list-group-item';
-          li.textContent = mod.title;
-          moduleList.appendChild(li);
-        });
-
-        const progressBar = document.getElementById('progressBar');
-        progressBar.style.width = data.checklistProgress + '%';
-        progressBar.textContent = data.checklistProgress + '%';
-
-        const sessionInfo = document.getElementById('sessionInfo');
-        if (data.upcomingSession) {
-          sessionInfo.textContent = data.upcomingSession;
-          document.getElementById('joinSessionBtn').style.display = 'inline-block';
-        } else {
-          sessionInfo.textContent = 'No session scheduled';
-        }
-      } catch (err) {
-        console.error(err);
-      }
-    });
-
-    function askAI() {
-      const input = document.getElementById('questionInput').value;
-      const aiResponse = document.getElementById('aiResponse');
-      aiResponse.textContent = 'Thinking...';
-      setTimeout(() => {
-        aiResponse.textContent = "This is a placeholder AI response to: '" + input + "'";
-      }, 1000);
-    }
-  </script-->
+    
 
 </body>
 
