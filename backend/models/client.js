@@ -1,9 +1,10 @@
 const Sequelize = require('sequelize');
-const sequelize = require('../../util/dataBase')
+const sequelize = require('../../util/dataBase');
 
-const Employee = sequelize.define('employee',{
-    empId: {
+const ClientTeam = sequelize.define('client_team', {
+    id: {
         type: Sequelize.INTEGER,
+        autoIncrement: true,
         primaryKey: true,
         allowNull: false
     },
@@ -11,24 +12,23 @@ const Employee = sequelize.define('employee',{
         type: Sequelize.STRING,
         allowNull: false
     },
-    email: {
+    project_code: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    unit: {
+    team_code: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    role: {
-        type: Sequelize.STRING,
-        allowNull: false
+    is_lead: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
     },
-    status: {
+    description: {
         type: Sequelize.STRING,
         allowNull: false
     }
 
-    
 });
 
-module.exports = Employee;
+module.exports = ClientTeam;
