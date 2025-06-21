@@ -20,6 +20,11 @@ const ClientTeam = sequelize.define('client_team', {
         type: Sequelize.STRING,
         allowNull: false
     },
+    team_name:{
+        type: Sequelize.STRING,
+        
+    },
+    
     is_lead: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,

@@ -9,7 +9,9 @@ const Employee = require('../models/employee');
 
 const teamController = require('../controllers/team');
 
-router.get('/teamInfo', authenticate, teamController.teamInfo)
+router.get('/teamInfo', authenticate, teamController.teamInfo);
+
+router.get('/clientTeamInfo',authenticate, teamController.clientTeamInfo)
 
 
 

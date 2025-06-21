@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const token = localStorage.getItem('token');
 
   try {
-    const { data } = await axios.get('http://localhost:4000/team/teamInfo', { headers: { 'Authorization': token }});
+    const { data } = await axios.get('http://localhost:4000/team/teamInfo', { headers: { 'Authorization': token } });
 
     container.innerHTML = '';
     modalContainer.innerHTML = '';
@@ -72,6 +72,32 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
     });
 
+    // Fetch client teams
+    const clientData = await axios.get('http://localhost:4000/team/clientTeamInfo', {
+      headers: { 'Authorization': token }
+    });
+
+    clientData.data.forEach(clientTeam => {
+      const card = document.createElement('div');
+      card.className = 'col-md-4';
+
+      const teamMembersList = clientTeam.members.map(member => `
+    <li>${member.name}${member.is_lead ? ' (Lead)' : ''}</li>`).join('');
+
+      card.innerHTML = `
+    <div class="card h-100 shadow">
+      <div class="bg-dark text-white text-center py-2">
+        <h5 class="mb-0">${clientTeam.name}</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">${clientTeam.description}</p>
+        <ul class="list-unstyled">${teamMembersList}</ul>
+      </div>
+    </div>
+  `;
+
+      container.appendChild(card);
+    });
   } catch (err) {
     console.error('Error loading teams:', err);
     alert('Failed to load team data.');

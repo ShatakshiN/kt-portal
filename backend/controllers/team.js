@@ -1,7 +1,8 @@
 const Team = require('../models/team');
 const Employee = require('../models/employee');
+const ClientTeam = require('../models/client');
 
-exports.teamInfo = async(req,res,next)=>{
+exports.teamInfo = async (req, res, next) => {
   try {
     const teams = await Team.findAll({
       include: {
@@ -32,3 +33,34 @@ exports.teamInfo = async(req,res,next)=>{
 
 };
 
+exports.clientTeamInfo = async (req, res, next) => {
+  try {
+    const clientTeams = await ClientTeam.findAll({
+      order: [['team_code', 'ASC']],
+    });
+
+    const groupedTeams = {};
+
+    clientTeams.forEach(member => {
+      if (!groupedTeams[member.team_code]) {
+        groupedTeams[member.team_code] = {
+          name: member.team_name,
+          description: member.description,
+          team_code: member.team_code,
+          project_code: member.project_code,
+          members: []
+        };
+      }
+
+      groupedTeams[member.team_code].members.push({
+        name: member.name,
+        is_lead: member.is_lead
+      });
+    });
+
+    res.status(200).json(Object.values(groupedTeams));
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to fetch client team data' });
+  }
+};

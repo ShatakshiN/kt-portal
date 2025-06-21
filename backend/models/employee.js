@@ -26,9 +26,7 @@ const Employee = sequelize.define('employee',{
     status: {
         type: Sequelize.STRING,
         allowNull: false
-    }
-
-    
+    }  
 });
 
 module.exports = Employee;
